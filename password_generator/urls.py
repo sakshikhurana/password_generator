@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from generator import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('password_generated/', views.password_generated_view, name='generated'),
+    path('', views.home_view, name='home')
 ]
